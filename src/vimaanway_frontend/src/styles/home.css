@@ -1,0 +1,45 @@
+#content {
+  display: flex;
+  align-items: center;
+}
+
+#tagline {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+#tagline h1 {
+  font-size: 80px;
+  color: #362f25;
+  text-align: left;
+}
+
+#tagline p {
+  font-size: 20px;
+  color: #686767;
+  line-height: 30px;
+  text-align: left;
+}
+
+span {
+  color: #eeeded;
+}
+
+#image {
+  flex: 1;
+  text-align: center;
+}
+
+#image img {
+  max-width: 100%;
+  height: auto;
+}
+
+#trip {
+  background-color: white;
+}
+
+.main-image {
+  width: 100%;
+}

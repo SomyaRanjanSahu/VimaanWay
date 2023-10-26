@@ -1,0 +1,42 @@
+#flightDetails-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .detail-lists {
+    margin: auto auto 50px auto;
+    border-radius: 30px;
+    background: none;
+    width: 80%;
+  }
+  
+  .detail-lists ol {
+    color: #605f5f;
+    padding:  0;
+  }
+  
+  .detail-lists ol li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    font-size: 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .detail-lists ol li button {
+    background-color: transparent;
+    border: none;
+    color: #233c87;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .detail-lists ol li button:hover {
+    color: #2e5add;
+    text-decoration: underline;
+  }

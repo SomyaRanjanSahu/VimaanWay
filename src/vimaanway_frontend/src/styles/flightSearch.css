@@ -1,0 +1,86 @@
+.flight-search-form {
+    margin: 50px auto 100px auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-top: 10px solid #4b3942;
+    border-radius:10px 10px 30px 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+  }
+  
+  input[type="text"], input[type="date"], input[type="number"] {
+    width: 95%;
+  }
+
+  input[type="checkbox"] {
+    margin: 50px;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .flight-search-form input {
+    height: 30px;
+  }
+
+  .flight-search-form select {
+    height: 53px;
+  }
+  
+  .flight-search-form input,
+  .flight-search-form select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #382908;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  
+  .flight-search-form table {
+    width: 100%;
+  }
+  
+  .flight-search-form table td {
+    padding: 5px;
+  }
+  
+  .flight-search-form label {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .flight-search-form button {
+    background-color: #997588;
+    color: #fff;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+  }
+  
+  .flight-search-form button:hover {
+    background-color: #fff;
+    color: #997588;
+    border: 2px solid #997588;
+  }
+  
+  .right-data {
+    text-align: right;
+  }
+
+  .left-data {
+    text-align: left;
+  }
+
+  .flight-search-form form {
+    text-align: center;
+  }
+
+  .depart-label {
+    text-align: left; 
+  }

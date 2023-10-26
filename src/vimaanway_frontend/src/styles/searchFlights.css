@@ -1,0 +1,28 @@
+#search-container {
+    align-items: center;
+}
+
+#searchFlight-content {
+    margin: 50px auto 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchFlight-content table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 20px;
+}
+
+#searchFlight-content td {
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 2px solid #e9e6e4;
+    color: #333;
+    width: 25%;
+    background-color: rgb(255, 255, 255, 0.5);
+}
