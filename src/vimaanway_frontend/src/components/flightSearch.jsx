@@ -1,33 +1,48 @@
 import React, { useState } from 'react';
 import '../styles/flightSearch.css';
 import { useNavigate } from 'react-router-dom';
+import { vimaanway_backend } from '../../../declarations/vimaanway_backend';
+
 const FlightSearchForm = () => {
+    //getting today's date
+    const today = new Date().toISOString().split('T')[0];
+
     const [origin, setOrigin] = useState('');
     const [destination, setDestination] = useState('');
-    const [departDate, setDepartDate] = useState('');
+    const [departDate, setDepartDate] = useState(today);
     const [returnDate, setReturnDate] = useState('');
-    const [travelers, setTravelers] = useState('');
+    const [travellers, setTravelers] = useState(1);
     const [travelCategory, setTravelCategory] = useState('');
-    const [fareTypes, setFareTypes] = useState({
-        oneWay: false,
-        twoWay: false,
-    });
-
-    const handleFareTypeChange = (fareType) => {
-        setFareTypes({ ...fareTypes, [fareType]: !fareTypes[fareType] });
-    };
+    const [fareTypes, setFareTypes] = useState('');
 
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(origin && destination && departDate) {
-            navigate("./search");
-        } else {
-            alert("fill in the 'Origin' & 'Destination' fields");
+
+        // Creating an array of promises for the asynchronous operations
+        const promises = [];
+
+        if (origin && destination && departDate) {
+            promises.push(vimaanway_backend.setOrigin(origin));
+            promises.push(vimaanway_backend.setDestination(destination));
+            promises.push(vimaanway_backend.setDepartDate(departDate));
+            promises.push(vimaanway_backend.setReturnDate(returnDate));
+            promises.push(vimaanway_backend.setTravellers(parseInt(travellers)));
+            promises.push(vimaanway_backend.setTripType(fareTypes));
         }
 
+        // Waiting for all promises to complete
+        await Promise.all(promises);
+
+        // Checking if the required fields were filled
+        if (origin && destination && departDate) {
+            navigate("./search");
+        } else {
+            alert("Fill in the 'Origin' & 'Destination' fields");
+        }
     };
+
 
     return (
         <div className="flight-search-form">
@@ -38,9 +53,10 @@ const FlightSearchForm = () => {
                             <td>
                                 <label>
                                     <input
-                                        type="checkbox"
-                                        checked={fareTypes.oneWay}
-                                        onChange={() => handleFareTypeChange('oneWay')}
+                                        type="radio"
+                                        value="One Way"
+                                        name="fareTypes"
+                                        onChange={(e) => setFareTypes(e.target.value)}
                                     />
                                     &nbsp;&nbsp;One Way Trip
                                 </label>
@@ -48,9 +64,10 @@ const FlightSearchForm = () => {
                             <td>
                                 <label>
                                     <input
-                                        type="checkbox"
-                                        checked={fareTypes.twoWay}
-                                        onChange={() => handleFareTypeChange('twoWay')}
+                                        type="radio"
+                                        value="Two Way"
+                                        name="fareTypes"
+                                        onChange={(e) => setFareTypes(e.target.value)}
                                     />
                                     &nbsp;&nbsp;Two Way Trip
                                 </label>
@@ -82,17 +99,19 @@ const FlightSearchForm = () => {
                                     type="date"
                                     placeholder="Depart Date"
                                     value={departDate}
+                                    min={today}
                                     onChange={(e) => setDepartDate(e.target.value)}
                                 />
                             </td>
                             <td className="right-data">
                                 <label htmlFor="">Return Date</label>
-                                {fareTypes.twoWay && (
+                                {fareTypes === 'Two Way' && (
 
                                     <input
                                         type="date"
                                         placeholder="Return Date"
                                         value={returnDate}
+                                        min={departDate}
                                         onChange={(e) => setReturnDate(e.target.value)}
                                     />
                                 )}
@@ -104,7 +123,7 @@ const FlightSearchForm = () => {
                                     type="number"
                                     placeholder="Travellers"
                                     name="num" min="1" max="400"
-                                    value={travelers}
+                                    value={travellers}
                                     onChange={(e) => setTravelers(e.target.value)}
                                 />
                             </td>

@@ -24,6 +24,7 @@
   list-style: none;
   display: flex;
   gap: 50px;
+  padding: 0;
 }
 
 .nav-links a {
