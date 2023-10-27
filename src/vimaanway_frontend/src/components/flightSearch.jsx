@@ -36,10 +36,10 @@ const FlightSearchForm = () => {
         await Promise.all(promises);
 
         // Checking if the required fields were filled
-        if (origin && destination && departDate) {
+        if (origin && destination && fareTypes) {
             navigate("./search");
         } else {
-            alert("Fill in the 'Origin' & 'Destination' fields");
+            alert("Fill all the required fields");
         }
     };
 
@@ -50,32 +50,34 @@ const FlightSearchForm = () => {
                 <table>
                     <tbody>
                         <tr>
+                            <td className="required-field">
+                               Trip type →
+                            </td>
                             <td>
-                                <label>
+                            <label className="td-background radio-background1">
                                     <input
                                         type="radio"
                                         value="One Way"
                                         name="fareTypes"
                                         onChange={(e) => setFareTypes(e.target.value)}
                                     />
-                                    &nbsp;&nbsp;One Way Trip
+                                    &nbsp;&nbsp;One Way
                                 </label>
-                            </td>
-                            <td>
-                                <label>
+                                <label className="td-background radio-background2">
                                     <input
                                         type="radio"
                                         value="Two Way"
                                         name="fareTypes"
                                         onChange={(e) => setFareTypes(e.target.value)}
                                     />
-                                    &nbsp;&nbsp;Two Way Trip
+                                    &nbsp;&nbsp;Two Way
                                 </label>
                             </td>
 
                         </tr>
                         <tr>
-                            <td>
+                            <td className="left-data">
+                                <label htmlFor="" className="required-field">From :</label>
                                 <input
                                     type="text"
                                     placeholder="Origin"
@@ -83,7 +85,8 @@ const FlightSearchForm = () => {
                                     onChange={(e) => setOrigin(e.target.value)}
                                 />
                             </td>
-                            <td className="right-data">
+                            <td className="left-data">
+                                <label htmlFor="" className="required-field">To :</label>
                                 <input
                                     type="text"
                                     placeholder="Destination"
@@ -94,7 +97,7 @@ const FlightSearchForm = () => {
                         </tr>
                         <tr>
                             <td className="left-data">
-                                <label htmlFor="">Depart Date</label>
+                                <label htmlFor="">Depart Date :</label>
                                 <input
                                     type="date"
                                     placeholder="Depart Date"
@@ -103,10 +106,11 @@ const FlightSearchForm = () => {
                                     onChange={(e) => setDepartDate(e.target.value)}
                                 />
                             </td>
-                            <td className="right-data">
-                                <label htmlFor="">Return Date</label>
+                            <td className="left-data">
                                 {fareTypes === 'Two Way' && (
-
+                                    <label htmlFor="returnDate">Return Date :</label>
+                                )}
+                                {fareTypes === 'Two Way' && (
                                     <input
                                         type="date"
                                         placeholder="Return Date"
@@ -118,7 +122,8 @@ const FlightSearchForm = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="left-data">
+                                <label htmlFor="">Travellers :</label>
                                 <input
                                     type="number"
                                     placeholder="Travellers"
@@ -127,7 +132,8 @@ const FlightSearchForm = () => {
                                     onChange={(e) => setTravelers(e.target.value)}
                                 />
                             </td>
-                            <td className="right-data">
+                            <td className="left-data">
+                                <label htmlFor="">Travel category :</label>
                                 <select
                                     value={travelCategory}
                                     placeholder="Travel Category"
@@ -141,17 +147,20 @@ const FlightSearchForm = () => {
                         </tr>
                         <tr>
                             <td colSpan={2}>
-                                <label>
-                                    <input type="checkbox" /> &nbsp;&nbsp;Regular&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label className="td-background checkbox-label checkbox-label1">
+                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Regular&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
-                                <label>
-                                    <input type="checkbox" /> &nbsp;&nbsp;Armed Forces&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label className="td-background checkbox-label">
+                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Armed Forces&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
-                                <label>
-                                    <input type="checkbox" /> &nbsp;&nbsp;Student&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label className="td-background checkbox-label">
+                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Student&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
-                                <label>
-                                    <input type="checkbox" /> &nbsp;&nbsp;Senior Citizen&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label className="td-background checkbox-label">
+                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Senior Citizen&nbsp;&nbsp;&nbsp;&nbsp;
+                                </label>
+                                <label className="td-background checkbox-label checkbox-label4">
+                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Doctor & Nurse &nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                             </td>
                         </tr>

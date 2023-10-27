@@ -13,10 +13,6 @@
     width: 95%;
   }
 
-  input[type="checkbox"] {
-    margin: 50px;
-  }
-
   select {
     width: 100%;
   }
@@ -68,10 +64,6 @@
     color: #997588;
     border: 2px solid #997588;
   }
-  
-  .right-data {
-    text-align: right;
-  }
 
   .left-data {
     text-align: left;
@@ -81,6 +73,34 @@
     text-align: center;
   }
 
-  .depart-label {
-    text-align: left; 
+  .td-background {
+    background-color: #f7efeb;
+    padding: 5px 15px;    
+  }
+
+  .checkbox-label {
+    margin: 15px 2px auto auto;
+  }
+
+  .checkbox-label1 {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .checkbox-label4 {
+    border-radius: 0 20px 20px 0;
+  }
+
+  .radio-background1 {
+   border-radius: 20px 0 0 20px;
+   margin-right: 2px;
+  }
+
+  .radio-background2 {
+    border-radius: 0 20px 20px 0;
+   }
+
+  .required-field::before {
+    content: "*";
+    color: red;
+    margin-right:2px
   }
