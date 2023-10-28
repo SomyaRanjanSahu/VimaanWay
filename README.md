@@ -52,9 +52,13 @@ The following technologies and libraries are used for the development of this we
 ## Screenshots
 
 <p align = "center">
-  <img src="https://i.postimg.cc/YqvrR8XG/one.png" width="80%"/>
+  <img src="https://i.postimg.cc/GmxPnzJG/1.png" width="80%"/>
   <br>
-  <img src="https://i.postimg.cc/C5QFYfKx/two.png" width="80%"/>
+  <img src="https://i.postimg.cc/RVfQXvWP/2.png" width="80%"/>
+  <br>
+  <img src="https://i.postimg.cc/WpxwGd1F/3.png" width="80%"/>
+  <br>
+  <img src="https://i.postimg.cc/0ysG4hm9/4.png" width="80%"/>
   <br>
   <img src="https://i.postimg.cc/YCgpK0Bt/three.png" width="80%"/>
 </p>

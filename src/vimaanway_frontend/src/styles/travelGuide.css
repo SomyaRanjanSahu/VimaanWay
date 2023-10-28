@@ -67,7 +67,7 @@ hr {
 
 .carousel__container {
     white-space: nowrap;
-    margin: 70px 0px;
+    margin: 70px 100px 70px 0;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -147,8 +147,7 @@ hr {
     opacity: 1;
 }
 
-.carousel-item__details .carousel-item__details--title
-{
+.carousel-item__details .carousel-item__details--title {
     color: #fff;
     margin: 5px 0;
     font-size: 14px;

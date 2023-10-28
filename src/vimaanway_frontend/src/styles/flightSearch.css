@@ -1,106 +1,108 @@
 .flight-search-form {
-    margin: 50px auto 100px auto;
-    padding: 50px;
-    border: 1px solid #ccc;
-    border-top: 10px solid #4b3942;
-    border-radius:10px 10px 30px 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 70%;
-  }
-  
-  input[type="text"], input[type="date"], input[type="number"] {
-    width: 95%;
-  }
+  margin: 50px auto 100px auto;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-top: 10px solid #4b3942;
+  border-radius: 10px 10px 30px 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 70%;
+}
 
-  select {
-    width: 100%;
-  }
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 95%;
+}
 
-  .flight-search-form input {
-    height: 30px;
-  }
+select {
+  width: 100%;
+}
 
-  .flight-search-form select {
-    height: 53px;
-  }
-  
-  .flight-search-form input,
-  .flight-search-form select {
-    padding: 10px;
-    margin: 5px 0;
-    border: 2px solid #382908;
-    border-radius: 8px;
-    font-size: 15px;
-  }
-  
-  .flight-search-form table {
-    width: 100%;
-  }
-  
-  .flight-search-form table td {
-    padding: 5px;
-  }
-  
-  .flight-search-form label {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .flight-search-form button {
-    background-color: #997588;
-    color: #fff;
-    padding: 20px 60px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 20px 0 0 0;
-  }
-  
-  .flight-search-form button:hover {
-    background-color: #fff;
-    color: #997588;
-    border: 2px solid #997588;
-  }
+.flight-search-form input {
+  height: 30px;
+}
 
-  .left-data {
-    text-align: left;
-  }
+.flight-search-form select {
+  height: 53px;
+}
 
-  .flight-search-form form {
-    text-align: center;
-  }
+.flight-search-form input,
+.flight-search-form select {
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #382908;
+  border-radius: 8px;
+  font-size: 15px;
+}
 
-  .td-background {
-    background-color: #f7efeb;
-    padding: 5px 15px;    
-  }
+.flight-search-form table {
+  width: 100%;
+}
 
-  .checkbox-label {
-    margin: 15px 2px auto auto;
-  }
+.flight-search-form table td {
+  padding: 5px;
+}
 
-  .checkbox-label1 {
-    border-radius: 20px 0 0 20px;
-  }
+.flight-search-form label {
+  display: inline-flex;
+  align-items: center;
+}
 
-  .checkbox-label4 {
-    border-radius: 0 20px 20px 0;
-  }
+.flight-search-form button {
+  background-color: #997588;
+  color: #fff;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 0 0;
+}
 
-  .radio-background1 {
-   border-radius: 20px 0 0 20px;
-   margin-right: 2px;
-  }
+.flight-search-form button:hover {
+  background-color: #fff;
+  color: #997588;
+  border: 2px solid #997588;
+}
 
-  .radio-background2 {
-    border-radius: 0 20px 20px 0;
-   }
+.left-data {
+  text-align: left;
+}
 
-  .required-field::before {
-    content: "*";
-    color: red;
-    margin-right:2px
-  }
+.flight-search-form form {
+  text-align: center;
+}
+
+.td-background {
+  background-color: #f7efeb;
+  padding: 5px 15px;
+}
+
+.checkbox-label {
+  margin: 15px 2px auto auto;
+}
+
+.checkbox-label1 {
+  border-radius: 20px 0 0 20px;
+}
+
+.checkbox-label4 {
+  border-radius: 0 20px 20px 0;
+}
+
+.radio-background1 {
+  border-radius: 20px 0 0 20px;
+  margin-right: 2px;
+}
+
+.radio-background2 {
+  border-radius: 0 20px 20px 0;
+}
+
+.required-field::before {
+  content: "*";
+  color: red;
+  margin-right: 2px
+}

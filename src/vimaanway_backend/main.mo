@@ -68,17 +68,79 @@ actor {
     return travellers;
   };
 
+  // Flight arrays to store flight details for different cities
+
   let flightArray : [Text] = [
-    "Indigo A6320, Dpt time : 10:00",
-    "Indigo A6321, Dpt time :  11:00",
-    "Air India A6322, Dpt time :  12:00",
-    "Air India A6323, Dpt time :  13:00",
-    "Vistara A6324, Dpt time :  14:00",
-    "Vistara A6325, Dpt time :  15:00",
+    "IndiGo (6E-1248) | 08:00 - 10:30 | --> ₹3,500",
+    "Air India (AI626) | 09:30 - 11:45 | --> ₹4,200",
+    "SpiceJet (SG2341) | 13:15 - 15:30 | --> ₹3,800",
+    "AirAsia India (I59613) | 07:45 - 09:55 | --> ₹3,200",
+    "Vistara (UK929) | 10:30 - 12:45 | --> ₹4,800",
+    "Alliance Air (AA5412) | 11:00 - 13:15 | --> ₹4,000",
+    "Saudia (SU985) | 12:30 - 15:00 | --> ₹5,500",
+    "Qatar Airways (QA-1965) | 08:15 - 10:45 | --> ₹6,200",
+    "Air Arabia (AI582) | 10:15 - 12:30 | --> ₹4,600",
+    "Etihad Airways (EA5697) | 11:30 - 13:45 | --> ₹5,800",
+    "Lufthansa (L2514) | 09:45 - 12:00 | --> ₹7,000",
+    "Emirates (ER1110) | 13:00 - 15:30 | --> ₹6,800",
+  ];
+
+  let mumbaiFlights : [Text] = [
+    "Air India (AI626) | 09:30 - 11:45 | --> ₹4,200",
+    "SpiceJet (SG2341) | 13:15 - 15:30 | --> ₹3,800",
+    "AirAsia India (I59613) | 07:45 - 09:55 | --> ₹3,200",
+    "Vistara (UK929) | 10:30 - 12:45 | --> ₹4,800",
+  ];
+
+  let delhiFlights : [Text] = [
+    "Saudia (SU985) | 12:30 - 15:00 | --> ₹5,500",
+    "Qatar Airways (QA-1965) | 08:15 - 10:45 | --> ₹6,200",
+    "Air Arabia (AI582) | 10:15 - 12:30 | --> ₹4,600",
+    "Etihad Airways (EA5697) | 11:30 - 13:45 | --> ₹5,800",
+    "Lufthansa (L2514) | 09:45 - 12:00 | --> ₹7,000",
+  ];
+
+  let odishaFlights : [Text] = [
+    "IndiGo (6E-1248) | 08:00 - 10:30 | --> ₹3,500",
+    "Air India (AI626) | 09:30 - 11:45 | --> ₹4,200",
+    "SpiceJet (SG2341) | 13:15 - 15:30 | --> ₹3,800",
+  ];
+
+  let kolkataFlights : [Text] = [
+    "IndiGo (6E-1248) | 08:00 - 10:30 | --> ₹3,500",
+    "Air India (AI626) | 09:30 - 11:45 | --> ₹4,200",
+    "Etihad Airways (EA5697) | 11:30 - 13:45 | --> ₹5,800",
+    "Lufthansa (L2514) | 09:45 - 12:00 | --> ₹7,000",
+    "Emirates (ER1110) | 13:00 - 15:30 | --> ₹6,800",
+  ];
+
+  let chennaiFlights : [Text] = [
+    "Vistara (UK929) | 10:30 - 12:45 | --> ₹4,800",
+    "Alliance Air (AA5412) | 11:00 - 13:15 | --> ₹4,000",
+    "Saudia (SU985) | 12:30 - 15:00 | --> ₹5,500",
+    "IndiGo (6E-1248) | 08:00 - 10:30 | --> ₹3,500",
+    "Air India (AI626) | 09:30 - 11:45 | --> ₹4,200",
+  ];
+
+  let bangaloreFlights : [Text] = [
+    "Alliance Air (AA5412) | 11:00 - 13:15 | --> ₹4,000",
+    "Saudia (SU985) | 12:30 - 15:00 | --> ₹5,500",
+    "Qatar Airways (QA-1965) | 08:15 - 10:45 | --> ₹6,200",
+    "Air Arabia (AI582) | 10:15 - 12:30 | --> ₹4,600",
+    "Etihad Airways (EA5697) | 11:30 - 13:45 | --> ₹5,800",
+    "Lufthansa (L2514) | 09:45 - 12:00 | --> ₹7,000",
   ];
 
   public query func getFlights() : async [Text] {
-    return flightArray;
+    switch (origin) {
+      case ("Mumbai") { return mumbaiFlights };
+      case ("Delhi") { return delhiFlights };
+      case ("Odisha") { return odishaFlights };
+      case ("Kolkata") { return kolkataFlights };
+      case ("Chennai") { return chennaiFlights };
+      case ("Bangalore") { return bangaloreFlights };
+      case (_) { return flightArray };
+    };
   };
 
 };

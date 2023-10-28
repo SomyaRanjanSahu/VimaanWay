@@ -1,0 +1,60 @@
+#getTicket-container {
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#getImage-container {
+    display: flex;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+#getTicket-container img {
+    width: 620px;
+}
+
+#get-image img {
+    flex: 1;
+}
+
+#getImage-box {
+    flex: 1;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#getImage-box h2 {
+    font-size: 50px;
+    color: #362f25;
+}
+
+#getImage-box input {
+    font-size: 20px;
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    background-color: #faf7f5;
+    border: 3px solid #362f25;
+    margin-top: 10px;
+}
+
+#getImage-box button {
+    background-color: #362f25;
+    color: #fff;
+    border: 3px solid #362f25;
+    border-radius: 0 50px 50px 0;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: none;
+}
+
+#getImage-box button:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.getTicket-h2 {
+    text-align: center;
+    font-size: 30px;
+}

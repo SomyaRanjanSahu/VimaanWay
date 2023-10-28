@@ -23,14 +23,12 @@ const FlightSearchForm = () => {
         // Creating an array of promises for the asynchronous operations
         const promises = [];
 
-        if (origin && destination && departDate) {
-            promises.push(vimaanway_backend.setOrigin(origin));
-            promises.push(vimaanway_backend.setDestination(destination));
-            promises.push(vimaanway_backend.setDepartDate(departDate));
-            promises.push(vimaanway_backend.setReturnDate(returnDate));
-            promises.push(vimaanway_backend.setTravellers(parseInt(travellers)));
-            promises.push(vimaanway_backend.setTripType(fareTypes));
-        }
+        promises.push(vimaanway_backend.setOrigin(origin));
+        promises.push(vimaanway_backend.setDestination(destination));
+        promises.push(vimaanway_backend.setDepartDate(departDate));
+        promises.push(vimaanway_backend.setReturnDate(returnDate));
+        promises.push(vimaanway_backend.setTravellers(parseInt(travellers)));
+        promises.push(vimaanway_backend.setTripType(fareTypes));
 
         // Waiting for all promises to complete
         await Promise.all(promises);
@@ -39,7 +37,7 @@ const FlightSearchForm = () => {
         if (origin && destination && fareTypes) {
             navigate("./search");
         } else {
-            alert("Fill all the required fields");
+            alert("Please fill all the required fields!");
         }
     };
 
@@ -51,10 +49,10 @@ const FlightSearchForm = () => {
                     <tbody>
                         <tr>
                             <td className="required-field">
-                               Trip type →
+                                Trip type →
                             </td>
                             <td>
-                            <label className="td-background radio-background1">
+                                <label className="td-background radio-background1">
                                     <input
                                         type="radio"
                                         value="One Way"
@@ -148,19 +146,19 @@ const FlightSearchForm = () => {
                         <tr>
                             <td colSpan={2}>
                                 <label className="td-background checkbox-label checkbox-label1">
-                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Regular&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="travelCategory" /> &nbsp;&nbsp;Regular&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                                 <label className="td-background checkbox-label">
-                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Armed Forces&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="travelCategory" /> &nbsp;&nbsp;Armed Forces&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                                 <label className="td-background checkbox-label">
-                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Student&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="travelCategory" /> &nbsp;&nbsp;Student&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                                 <label className="td-background checkbox-label">
-                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Senior Citizen&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="travelCategory" /> &nbsp;&nbsp;Senior Citizen&nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                                 <label className="td-background checkbox-label checkbox-label4">
-                                    <input type="radio" name= "travelCategory" /> &nbsp;&nbsp;Doctor & Nurse &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="travelCategory" /> &nbsp;&nbsp;Doctor & Nurse &nbsp;&nbsp;&nbsp;&nbsp;
                                 </label>
                             </td>
                         </tr>
