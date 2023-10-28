@@ -19,6 +19,10 @@ select {
   width: 100%;
 }
 
+.flight-search-form input[type="text"] {
+  text-transform: uppercase;
+}
+
 .flight-search-form input {
   height: 30px;
 }
