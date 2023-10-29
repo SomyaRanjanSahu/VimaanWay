@@ -1,0 +1,64 @@
+ #flight-displayTicket {
+   border: 2px solid #333;
+   width: 72%;
+   background-color: #fff;
+   font-family: Arial, sans-serif;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   margin: 0 auto;
+   padding: 20px 50px;
+ }
+
+ .left-column {
+   text-align: left;
+ }
+
+ .right-column {
+   text-align: right;
+ }
+
+ .displayTicket-image {
+   width: 220px;
+ }
+
+ #displayTicket-tableBody hr {
+   width: 100%;
+ }
+
+ #displayTicket-tableBody tr td {
+   line-height: 28px;
+ }
+
+ #displayTicket-tableBody h2,
+ h3 {
+   margin: 0;
+ }
+
+ #displayTicket-tableBody h4 {
+   margin-top: 20px;
+ }
+
+ #displayTicket-tableBody li {
+   font-size: 14px;
+   color: gray;
+ }
+
+ #ticket-instruction {
+   line-height: normal;
+   font-size: 14px;
+   color: rgb(106, 106, 106);
+ }
+
+ #displayTicket-tableBody tr td hr {
+   border: 1px solid #bcbbbb;
+ }
+
+ #ticket-company {
+   font-size: 18px;
+   color: #362f25;
+ }
+
+ #ticket-company-span {
+   color: #686868;
+ }

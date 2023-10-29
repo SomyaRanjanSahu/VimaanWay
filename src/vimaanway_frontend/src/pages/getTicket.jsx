@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/getTicket.css';
 import Navbar from '../components/navbar';
+import DisplayTicket from '../components/displayTicket';
 
 function FlightTicket() {
     return (
@@ -8,7 +9,7 @@ function FlightTicket() {
             <Navbar />
             <div id="getImage-container">
                 <div id="getImage-img">
-                    <img src="ticket.png" alt="" classname="get-img" />
+                    <img src="ticket.png" alt="" id="get-img" />
                 </div>
                 <div id="getImage-box">
                     <h2 className="getImage-heading">Check your <span>ticket</span> now</h2>
@@ -17,6 +18,7 @@ function FlightTicket() {
                 </div>
             </div>
             <h2 className="getTicket-h2">Here is your ticket ⬇️</h2>
+            <DisplayTicket />
         </div>
 
     );

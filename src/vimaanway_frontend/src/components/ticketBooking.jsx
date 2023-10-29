@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/ticketBooking.css";
 
 function TicketBookingModal({ onClose, selectedFlight }) {
@@ -20,10 +21,12 @@ function TicketBookingModal({ onClose, selectedFlight }) {
         "W-12A", "M-12B", "A-12C", "A-12D", "M-12E", "W-12F",
     ];
 
+    const navigate = useNavigate();
+
     const handleConfirm = () => {
 
         if (passengerName && passengerAge) {
-            onClose();
+            navigate("./getTicket");
         } else {
             alert("Please fill all the required fields!");
         }
